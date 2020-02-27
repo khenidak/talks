@@ -11,8 +11,14 @@ tracepoints, metrics etc.
 `perf list block:*`
 filtering becomes really handy (or just `grep` it). the above filters for block i/o events
 
+## state and top
 `perf state ./go_app/main` # PMU is h/w events, arch specific
 quick and dirty stating a process. You can do with pids as well
+
+
+`perf top -a --pid=<PID>`
+top like view of a single process. kernel and userspace
+
 
 ## recording and viewing
 `perf record -e sched:sched_wakeup -a (executable)`
